@@ -1,0 +1,77 @@
+1. Data values that do not change while a program executes are ............
+A.  doubles
+B.  variables
+C.  literals.
+D.  integers
+=> C
+2. All variables must have a ________ before they are used in a program.
+A.  value
+B.  display statement
+C.  comment
+D.  definition
+=> D
+3. Storage locations in memory are represented by ________.
+A.  variables
+B.  square brackets []
+C.  literals
+D.  constants
+=> A
+4. String literals are always enclosed in ________.
+A.  square brackets []
+B.  curly braces {}
+C.  single quotes ''
+D.  double quotes ""
+=> D
+5. Character literals are always enclosed in ________.
+A.  square brackets []
+B.  curly braces {}
+C.  single quotes ''
+D.  double quotes ""
+=> C
+6. A variable that can hold only true or false values is of type ________.
+A.  int
+B.  bool
+C.  logical
+D.  double
+=> B
+7. The following expression determines how many bytes of storage are required to store a double on your computer:
+A.  bytes(double)
+B.  length(double)
+C.  double
+D.  sizeof(double)
+=> D
+8. What is the output  from the following code: 
+int x;
+cout << x << endl;
+A.  0
+B.  some garbage value
+C.  null
+D.  "No value"
+=> B
+9. Which variable definition is not legal in C++?
+A.  int x = 100; 
+B.  int x;
+C.  int x {100};
+D.  int x = 100
+=> D
+10. Which line in the following code will generate a compiler error?
+#include <iostream>
+using namespace std;
+ 
+int main()
+{
+   const int min_age = 18;
+   const int max_age = 35; 
+   min_age = 21;
+   cout << "Minimum age is " << min_age << endl;
+   return 0;
+}
+
+A.  8
+B.  7
+C.  6
+D.  9
+=> A
+
+
+
