@@ -25,7 +25,7 @@ int main()
      *  [Declaring]
      *  #include <vector>
      * ***/
-    vector <char> vowels (5);
+    // vector <char> vowels (5);
 
     vector <int> test_score (10);
     //Can use a constructor initialization syntax which provides information inside parentheses. This tells the compiler that you want 5 characters
