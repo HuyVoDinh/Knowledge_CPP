@@ -1,0 +1,101 @@
+1. The ________ operator increments the value of its operand by one then uses the value
+A. prefix increments
+B. postfix increments
+C. prefix decrements
+D. postfix decrements
+=> A
+
+2. The operator used to test two operands for equality is ________.
+A. equals
+B. compare
+C. == 
+D. = 
+=> C
+
+3. The operator that represents logical AND is ________.
+A. &
+B. ||
+C. |
+D. &&
+=> D
+
+4. The operator that represents logic OR is ________.
+A. &
+B. ||
+C. |
+D. &&
+=> B
+ 
+5.
+If a is 3, b is 5, and c is 7, which of the following are true?
+
+b == 5;
+c == (a + b) – 1;
+b > 5;
+a >= 3;
+c <= (a * b) / a
+A. 1, 2 and 3 are true
+B. 1, 2 and 4 are true
+C. Only 1 is true
+D. All are true
+=> B 
+
+6. a < 10  is called a(n) ________.
+A. statement
+B. declaration
+C. relational expression
+D. unary expression
+=> C
+// We're using a relational operator and it isn't a complete statement.
+
+
+7. What will the following code display?
+
+int x = 10, y = 3, z = 6;
+cout << (x == y) << " ";
+cout << (z <= x) << " ";
+cout << (y != z) << " ";
+cout << (x > y && z < x) << " ";
+cout << (y < x && z < x) << " ";
+cout << (x < y || z < 0) << endl;
+A. 0 1 0 1 0 1
+B. 0 1 1 0 1 0
+C. 1 0 0 0 0 1
+D. 0 1 1 1 1 0
+=> D
+
+8. What is displayed by the following code?
+
+int amount = 100;
+amount += amount * 2;
+cout << amount << endl;
+A. 102 
+B. 202
+C. 200
+D. 300
+=> D
+
+9. What is displayed by the following code?
+
+int x= 5;
+int y= -2;
+int z = 2;
+cout << (x + y * z <= x + z * z - x) << endl
+A. 1
+B. 0 
+C. -1 
+D. It won't compile
+=> A
+
+10. What are the values of x and y after the following code executes?
+
+double  a = 100;
+int b = 12;
+int x = b % 3;
+double  y = a / b;
+int z = a / b;
+A. x = 0, y = 8, z = 8
+B. x = 4, y = 8.333333, z = 8
+C. x = 8, y = 8.333333, z = 8
+D. x = 0, y = 8.333333, z = 8
+=> D
