@@ -76,20 +76,22 @@ using namespace std;
 void find_first_vowel(const std::vector<char>& vec) {
     //---- WRITE YOUR CODE BELOW THIS LINE----
     int i = 0;
+    bool flag = false;
+
     do {
         if(vec.empty() == false)
         {
             if (vec.at(i) == 'a' || vec.at(i) == 'e' || vec.at(i) == 'i' || vec.at(i) == 'o' || vec.at(i) == 'u')
-                {
-                    cout << "Vowel found: " << vec.at(i);
-                    break;
-                }
-            i++;
+                flag = true;
+            else
+                i++;
         }
-    } while (i < vec.size());\
+    } while (i < vec.size() && !flag);
 
-    if(vec.size() == i)
+    if(!flag)
         cout << "No vowel was found";
+    else
+        cout << "Vowel found: " << vec.at(i);
     //---- WRITE YOUR CODE ABOVE THIS LINE----
 }
 
