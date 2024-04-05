@@ -1,0 +1,121 @@
+1. What is the value of num  after the following code executes if the user enters 10  at the keyboard?
+
+int num;
+cin >> num;
+ 
+if (num > 10)
+   num -= 10;
+else
+   num += 10;
+
+A. 20
+B. 10
+C. 0
+D. -10
+=> A 
+
+2. What does the following code snippet display if the user enters 70  at the keyboard?     => if has semicolon
+
+int temperature;
+cout << "Enter a temperature: ";
+cin >> temperature;
+if (temperature < 50);
+   cout << "It's cold!" << endl;
+if (temperature > 50)
+   cout << "It's hot!" << endl;
+else
+   cout << "Maybe it's raining?"; 
+
+A. Maybe it's raining?
+B. It's cold!
+C. It's hot!
+D. It's cold!
+   It's hot!
+
+=> D 
+
+3. What does the following code snippet display if the user enters 20  at the keyboard?
+
+int favorite;
+cout << "Enter your favorite number: ";
+cin >> favorite;
+if (favorite == 13)
+   cout << "That my favorite number too!" << endl;
+   cout << "That's amazing!" << endl;
+   cout << "Great minds think alike!" << endl;
+
+A. That my favorite number too!
+B. Nothing is displayed
+C. That my favorite number too!
+   That's amazing!
+   Great minds think alike!
+D. That's amazing!
+   Great minds think alike!
+
+=> D 
+
+4. What will the following code snippet display?
+
+int num = 10;
+while (num >= 1)
+   cout << num << " ";
+   num--;
+
+A. 10 9 8 7 6 5 4 3 2 1
+B. 1 2 3 4 5 6 7 8 9 10
+C. 10 10 10 10 10 .... infinitely
+D. 9 8 7 6 5 4 3 2 1
+
+=> C
+
+5. The while loop is an example of a(n) ________. 
+
+A. pre-test loop
+B. post-test loop 
+C. range-based loop 
+D. recursive loop  
+
+=> A // We test the condition first. Then we loop if the condition is true.
+
+6. A do-while loop is guaranteed to execute ________.
+
+A. indefinitely
+B. until the programmer breaks out of it
+C. at least zero times
+D. at least one times
+
+=> D //The do loop always executes the first time in.
+
+7. The for loop has 3 expressions in the following order:
+
+A. increment, initialize, test 
+B. test, increment, initialize
+C. initialize, test, increment
+D. The order doesn't matter
+
+=> C
+
+8. A loop that is located inside another loop is called a(n) ________. 
+
+A. double loop
+B. nested loop
+C. inside-out loop
+D. outside-in loop
+=> B
+
+9. In order to terminate the execution of a loop, we can use the ________ statement.
+
+A. stop
+B. pool
+C. end
+D. break
+=> D
+
+10. If you know ahead of time how many times you need to loop, which loop would you use?
+
+A. for loop
+B. while loop
+C. do-while loop
+D. a range-based for loop
+
+=> A //Use a for loop when you know how many times you need to loop. It is more explicit to read and easier to understand, test, and debug.
