@@ -68,3 +68,12 @@ A. strcmp function
 B. is_equal_to function
 C. test
 D. == operator
+=> D
+
+10. Which of the following are true about C++ strings?
+
+A. C++ string are object
+B. C++ have a rich set of member methods
+C. C++ strings are preferred over C-style strings
+D. C++ strings can change in size dynamically
+E. All of the above
