@@ -1,0 +1,70 @@
+1. C-style strings are terminated with a(n) ________. 
+
+A. newline character \n
+B. nullptr
+C. null character \0
+D. a blank space
+=> C
+
+2. The function we can use to copy one C-style string to another is ________.?
+
+A. strlen
+B. strcpy
+C. strcat
+D. copy_string
+=> B
+
+3. In order to use C-style string functions we must #include ________.
+
+A. "cstring"
+B. <ctype>
+C. <string>
+D. <cstring>
+=> D
+
+4. To convert a char to its upper case equivalent we can use the ________ function.
+
+A. uppercase
+B. makeupper
+C. toupper
+D. isupper
+=> C
+
+5. The C-style string name[6] can ________.
+
+A. contain the name "Curly"
+B. contain the name "Buster"
+C. be assigned with name = "Larry";
+D. grow in size as needed
+=> A 
+
+6. In order to use a C++ string object, we must #include ________.
+ 
+A. <cstring>
+B. <ctype>
+C. <string>
+D. <cstring>
+=> C
+
+7. The + operator allows us to ________ two C++ strings.
+
+A. add
+B. capitalize
+C. concatenate
+D. superscript
+=> C
+
+8. In order to find the index of a substring within a C++ string, we can use the ________ method.
+
+A. locate
+B. find
+C. inspect
+D. substring
+=> B
+
+9. We can compare two C++ strings using the ________.
+
+A. strcmp function
+B. is_equal_to function
+C. test
+D. == operator
