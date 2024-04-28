@@ -1,0 +1,110 @@
+1. A function can have ________ parameters. 
+
+A. a maximum of five
+B. only one
+C. zero or more
+D. a blank space
+=> C 
+
+2. Variables defined in the body of a function that are visible only to the function are called ________ variables.
+
+A. local
+B. global
+C. function
+D. special
+=> A 
+
+3. Variables defined in functions whose values persist from call to call are called ________ variables.
+
+A. global
+B. static
+C. function
+D. special
+=> B 
+
+4. The default manner in which passing parameters to functions is achieved in C++ ________.
+
+A. pass-by-reference
+B. pass-by-name
+C. pass-by-pointer
+D. pass-by-value
+
+5. What is displayed by the following code?
+
+#include <iostream>
+using namespace std;
+ 
+void func(int x, int y, int z) {
+   x = y + z;
+   y = 10;
+   x = 20;
+}
+ 
+int main() {
+   int a = 10, b = 20, c = 30;
+   func(a, b, c);
+   cout << a << " " << b << " " <<  c << endl;
+   return 0;
+}
+
+A. 10 20 30
+B. 50 30 80
+C. 10 30 80
+D. 80 30
+=> A 
+
+6. What is displayed by the following code?
+
+#include <iostream>
+using namespace std;
+ 
+void func(int &x, int &y, int &z) {
+   x = y + z;
+   y = 10;
+   x = 20;
+}
+ 
+int main() {
+   int a = 10, b = 20, c = 30;
+   func(a, b, c);
+   cout << a << " " << b << " " <<  c << endl;
+   return 0;
+}
+
+A. 10 20 30
+B. 20 10 30
+C. 10 30 80
+D. 80 30
+=> B 
+
+7. ________ arguments can be automatically supplied to a function when no arguments are provided when the function is called.
+
+A. local
+B. reference
+C. regular
+D. default
+=> D 
+
+8. When a function calls itself, either directly or indirectly, this is defined as ________.
+
+A. self-calling
+B. as infinite loop
+C. recursion
+D. a function prototype
+=> C 
+
+9. Before we can call a function in C++, it must be defined or have a ________ provided.
+
+A. prototype
+B. default 
+C. overloaded function
+D. namespace
+=> A 
+
+10. Creating multiple versions of the same function name that accepts different parameters is called ________.
+
+A. function default
+B. function prototype
+C. function overloaded
+D. function augmenting
+=> C 
