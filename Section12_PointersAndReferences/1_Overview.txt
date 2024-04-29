@@ -1,0 +1,16 @@
+[Overview]
+
+- What is a pointerDeclaring pointers
+- Storing addresses in pointersDereferencing pointersDynamic memory allocation
+- Pointer arithmetic
+- Pointer and arrays
+- Pass-by-reference with pointers
+- const and pointers
+- Using pointers to functions
+- Potential pointer pitfalls
+- What is a reference?
+- Review passing references to functions
+- const and references
+- Reference variables in range-based for loops
+- Potential reference pitfalls
+- Raw vs. Smart pointers
