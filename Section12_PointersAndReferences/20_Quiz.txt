@@ -1,0 +1,95 @@
+1. A pointer variable can store ________.
+
+A. integer values
+B. double values
+C. addresses of other variable
+D. string values
+=> C
+
+2. In order to determine the address of a variable in C++, we can use the ________ operator.
+
+A. @
+B. ++
+C. *
+D. &
+=> D
+
+3. Pointer variables must always be ________ before they are used.
+
+A. dereferenced
+B. static
+C. initialized
+D. checked
+=> C
+
+4. In order to follow a pointer and access the data that it is pointing to, we must ________ the pointer using the ________ operator.
+
+A. use, @
+B. access, &
+C. dereferenced, *
+D. reference, *
+=> C
+
+5. Pointers can be used to dynamically allocate storage from the ________ at ________.]
+
+A. stack, compile-time
+B. stack, run-time
+C. heap or free store, run-time
+D. heap or free store, compile-time 
+=> C
+
+6. When using raw pointers and dynamic storage allocation, we must always de-allocate the used storage by using ________ to prevent ________.
+
+A. delete, memory leaks
+B. free, buffer overrun
+C. delete, stack overflow
+D. new, memory leak
+=> A 
+
+7. ________ and pointers can be used interchangeably in many contexts.
+
+A. Function calls
+B. Classes
+C. Vectors
+D. Array names
+=> D 
+
+8. What types of variables can ptr store given the following declaration below?
+
+int **ptr; 
+
+A. integers
+B. addresses of integers
+C. addresses of pointers to integers
+D. any type of integers
+=> C
+
+9. What does the following code snippet display?
+
+int *data = new int[5];
+ 
+for (int i = 0; i<5; i++)
+   *(data + i) = i*2;
+ 
+for (int i = 0; i<=4; i++)
+   cout << data[i] << " " ;
+cout << endl;   
+ 
+delete [] data;
+
+A. 0 1 2 3 4
+B. 0 2 4 6 8
+C. 2 4 6 8 10
+D. garbage data
+=> B 
+
+10. Given the following pointer declarations, what can you say about ptr1 and ptr2?
+
+int *ptr1;
+int *ptr2 { nullptr};
+
+A. ptr1 and ptr2 are both contain the address 0
+B. ptr1 and ptr2 are both initialized
+C. ptr1 is uninitialized and ptr2 is initialized
+D. prt1 and ptr2 are both uninitialized
+=> C
