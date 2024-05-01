@@ -1,0 +1,14 @@
+What is Object-Oriented Programming?
+What are Classes and Objects
+Declaring Classes and creating ObjectsDot and pointer operators
+public and private access modifiers => allow us to prevent access to parts of our code while still allowing access to the interface that will be used by other programmers
+Methods, Constructors and Destructors
+    class methods
+    default and overloaded constructors
+    copy and move constructors
+    shallow vs. deep copying
+    this pointer
+
+static class members
+struct vs. class 
+friend of a class
