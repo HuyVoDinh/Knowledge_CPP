@@ -8,7 +8,7 @@
  *      Dog spot {"Spot", 5};
  * ***/
 #include <string>
-#include "14_Dog.h"
+#include "15_Dog.h"
 using namespace std;
 
 int main()
