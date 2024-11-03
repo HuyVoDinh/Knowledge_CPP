@@ -1,0 +1,112 @@
+1. A Class is ________. 
+
+A. a user-defined data type
+B. a pointer to a method
+C. also known as an object
+D. special variable
+=> A 
+
+2. The ________ of a class is used to initialize objects of that class type.
+
+A. destructor
+B. initialize
+C. assignment operator
+D. constructor
+=> D
+
+3. Class member attributes can be accessed with the ________ operator.
+
+A. dot .
+B. insertion <<
+C. extraction >>
+D. sizeof
+=> A 
+
+4. If no user-defined constructors are provided for a class, C++ will automatically generate a ________ constructor.
+
+A. useful
+B. default
+C. local
+D. global
+=> B
+
+5. ________ and ________ determine the access allowed to class members
+
+A. new, delete
+B. public, private 
+C. open, closed
+D. viewable, non-viewable
+=> B
+
+6. The copy semantics provided by the default C++ Copy Constructor is ________.
+
+A. dynamic class 
+B. static access 
+C. deep copy 
+D. memberwise copy 
+=> D
+
+7. ________ are associated with the C++ Move Constructor.
+
+A. l-values
+B. r-values 
+C. l-value references
+D. r-value references
+=> D
+
+8. The class ________ is called when an object goes out of scope.
+
+A. deconstructor
+B. deleter
+C. destructor
+D. destroyer
+=> C
+
+9. What does the following code display?
+
+#include <iostream>
+using namespace std;
+ 
+class Test {
+private:
+   int num;
+   void increment_num() {
+      num++;
+   }
+public:
+   Test(int num) : num{num} { }
+};
+ 
+int main() {
+   Test object {100};
+   cout << object.increment_num() << endl;
+   return 0;
+}
+
+A. the code won't compile
+B. 100
+C. 101
+D. garbage data 
+=> A // increment_num is a private method and not accessible
+
+10. Given the following class declaration, which statement is NOT true?
+
+class Test {
+private:
+   int num;
+   void increment_num() {
+      num++;
+   }
+public:
+   Test(int num) : num{num} { }
+   void decrement_num() {
+      num--;
+   }
+};
+
+A. num is not accessible outside the class declaration
+B. the class name is Test 
+C. decrement_num() is accessible outside the class declaration
+D. the class has a default compiler generated copy constructor
+E. the class has a default compiler generated default constructor
+=> E    
