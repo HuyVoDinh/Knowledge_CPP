@@ -58,9 +58,9 @@
 using namespace std;
 
 int main() {
-    Mystring a {"Hello"};           // Overloaded constructor                           //Created an object am ut;s using an overloaded constructor that's expecting that character pointer. Just constructing a simple object a that's got that string attribute pointing to hello on the heap. 
-    a = Mystring {"Hola"};          // Overloaded constructor then move assignment      // Want to use assignment . "a" already exists so now this will be assignment not initialization. And what I want to do is construct another mystring object off of the initialization string Hola. At this point, that temporary object has no name, so it's an r-value. If we don't provide any move semantics, then it's going to use a copy constructor or a copy assignment operator to do what it needs to do. If don't have any move assignment operator implemented. You'll see that it's using copy assignment
-    a = "Bonjour";                  // Overloaded constructor then move assignment
+    // Mystring a {"Hello"};           // Overloaded constructor                           //Created an object am ut;s using an overloaded constructor that's expecting that character pointer. Just constructing a simple object a that's got that string attribute pointing to hello on the heap. 
+    // a = Mystring {"Hola"};          // Overloaded constructor then move assignment      // Want to use assignment . "a" already exists so now this will be assignment not initialization. And what I want to do is construct another mystring object off of the initialization string Hola. At this point, that temporary object has no name, so it's an r-value. If we don't provide any move semantics, then it's going to use a copy constructor or a copy assignment operator to do what it needs to do. If don't have any move assignment operator implemented. You'll see that it's using copy assignment
+    // a = "Bonjour";                  // Overloaded constructor then move assignment
     // Created a object and it's on the stack, it's got the str attribute, which is a pointer. And once this object has been constructed that pointer is pointing to the string hello, which is on the heap. It's got that null terminator at the end. This is the situation once we instantiate a.
     // Next we want to assign to a the object that create. That object gets created exactly the same way as we created a. It's using the overloaded constructor. But it doesn't have a name. It's an unnamed temporary object. It's got an str attribute, and it's pointing to Hola, which is on the heap. Now what we want to assign temp to a. But we really don't want to do the overhead of copying because we don't need to. This temporary object will be destroyed soon. So let's just use move assignment so that we can steal that pointer and not have to make any copies of anything or copy anything over. 
     // What are the semantics. The first thing we need to do is de-allocate the space for "Hello" because we're not going to use that. So we're going to get rid of that. and what that's going to do it's going to leave us in this situation where we're no longer pointing to that area. And we want to steal the pointer. So I want to make this pointer a point to Hola. And then once that's done, what I want to do is not delete information ("Hola"). I don't want to de-allocate that because using it. All I want to do is just null out temp pointer.
@@ -105,5 +105,5 @@ int main() {
     cout << "=======Loop 3===============" << endl;
     for(const Mystring &s : stooges_vec)
         s.display();
-    return;
+    return 0;
 }
