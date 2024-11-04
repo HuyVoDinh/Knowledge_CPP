@@ -1,5 +1,5 @@
 #include <iostream>
-#include "25_Player.cpp"
+#include "25_Player.h"
 using namespace std;
 
 void display_active_player(){
