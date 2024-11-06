@@ -7,3 +7,6 @@ Section10_CharactersAndStrings/*.exe
 Section11_Functions/*.exe
 Section12_PointersAndReferences/*.exe
 Section13_OOP-ClassesAndObjects/*.exe
+.vscode/c_cpp_properties.json
+.vscode/launch.json
+.vscode/tasks.json

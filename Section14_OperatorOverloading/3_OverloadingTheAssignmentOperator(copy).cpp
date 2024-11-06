@@ -74,13 +74,13 @@ using namespace std;
 
 int main(){
     //Example 1
-    Mystring a {"Hello"};               //overloaded constructor            //Instantiating my object "a". It's a mystring object, and I'm initializing it to Hello. It'll have an str attribute, which is a pointer, Hello will be allocated on the heap. Remember, there's a null character there at the end. So this is really six characters big, and atr attribute will be pointing to it. So that's the condition that I'll be in after the construction of the a object.
-    Mystring b;                         // no-args constructor              // WHen we create the b object, It'll have an str attribute. In this case, It pointing to an empty stream. The empty string consists of a single character with the null character in it.
-    b = a;                              // copy assignment
+    // Mystring a {"Hello"};               //overloaded constructor            //Instantiating my object "a". It's a mystring object, and I'm initializing it to Hello. It'll have an str attribute, which is a pointer, Hello will be allocated on the heap. Remember, there's a null character there at the end. So this is really six characters big, and atr attribute will be pointing to it. So that's the condition that I'll be in after the construction of the a object.
+    // Mystring b;                         // no-args constructor              // WHen we create the b object, It'll have an str attribute. In this case, It pointing to an empty stream. The empty string consists of a single character with the null character in it.
+    // b = a;                              // copy assignment
                                         // b.operator=(a)                   /*** In this case, this is assignment because b already exists, b has been instantiated. First, we want to be sure that we're not assigning to ourselves b = b or a = a. Then what we'll do is we really want b to contain that Hello. 
                                                                             // But we don't want this situation like we had with a shallow copy. We want to create a copy of that hello string on the heap. So in order to do t hat, there's a couple of things I need to do. First of all, I need to de-allocate the "empty" on the heap and this could be a lot bigger than just an empty string. This could be a very large string. So I want to allocate that. Then I want to allocate space for 6 characters because I'm copying hello as h-e-l-l-o and the null terminator.
                                                                             // I want to copy hello + over. Empty on the heap is gone. That's been de-allocated so we don't leak memory.
-    b = "This is a test";               // b.operator=("This is a test");   // Being also an assignment because we're assigning something to b and b already exists. In this case, It's a little bit different because we don't have an operator equal that expects a character pointer. So what we need to do is we need to construct a temporary object using the overloaded constructor and then assign that temporary object to b and then that will eventually be destroyed the temporary object will. 
+    // b = "This is a test";               // b.operator=("This is a test");   // Being also an assignment because we're assigning something to b and b already exists. In this case, It's a little bit different because we don't have an operator equal that expects a character pointer. So what we need to do is we need to construct a temporary object using the overloaded constructor and then assign that temporary object to b and then that will eventually be destroyed the temporary object will. 
 
     //Example2
     Mystring a {"Hello"};       //Constructing or instantiating that a object. I'm providing some initialization information. Going to call the overloaded constructor. There is the call to the overloaded constructor that expects a character pointer just like we expect, it's not null. So we're gonna skip the if part. Whatever the string that was being passed in by plus 1 for the null terminator. And the just copying it over. Finished, str attribute is pointing to the string hello.
@@ -123,5 +123,5 @@ int main(){
     cout << "=======Loop 3===============" << endl;
     for(const Mystring &s : stooges_vec)
         s.display();
-    return;
+    return 0;
 }
