@@ -134,5 +134,12 @@ int main(){
 
     larry.display();
     Mystring larry2 = -larry;
+    larry2.display();
+
+    Mystring stooges = larry + "Moe";
+    //Mystring stooges = "Larry" + moe;         //Compiler error
+
+    Mystring two_stooges = moe + " " + "Larry";
+    two_stooges.display();
     return 0;
 }
