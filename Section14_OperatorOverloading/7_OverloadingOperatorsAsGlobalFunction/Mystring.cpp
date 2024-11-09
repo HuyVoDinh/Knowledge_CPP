@@ -73,50 +73,50 @@ Mystring &Mystring::operator=(Mystring &&rhs)
 }
 
 // Equality
-bool Mystring::operator==(const Mystring &rhs) const
-{
-    // want to compare those two strings. The string in this and the string and right-hand side.
+// bool Mystring::operator==(const Mystring &rhs) const
+// {
+//     // want to compare those two strings. The string in this and the string and right-hand side.
 
-    return (std::strcmp(str, rhs.str) == 0); // return, and the new can call std string compare, which is a c-string function that compares two c-strings is which we've got. So str in one of them and rhs dot str is the other one. And if that returns 0, we'll return the value
-}
+//     return (std::strcmp(str, rhs.str) == 0); // return, and the new can call std string compare, which is a c-string function that compares two c-strings is which we've got. So str in one of them and rhs dot str is the other one. And if that returns 0, we'll return the value
+// }
 
 // Make lowercase
 // We're returning Mystring object by value. It's part of the Mystring class. There's my scope resolution operator, and it's operator minus nothing in the parameter list because it's a unary operator. And it's const because we don't want to change our current object again.
-Mystring Mystring::operator-() const
-{
-    // Remember we need to make a copy of whatever is in the current object, make that lover case, and then create a new object form it. I need to allocate space to create that copy so that I can make lowercase. I don't want to change the object because I can't . It's a const method.
-    // Let's create a temporary area and memory called buff, and we'll create a new array of characters there. And how big is that going to be. It's going to be as big as t he length of the string in str + 1. For example, If it's frank, I'm going to get bach 5, allocate 1. This is a brand new pointer to an area on the heap that I just allocated. It's local to this function.
-    // When we're finished with function, we need to get rid of that and de-allocate it.
-    char *buff = new char[std::strlen(str) + 1];
-    // At this point I need to copy the string that's in str to buff.
-    std::strcpy(buff, str);
-    // Copy that string. So what we can do now is we can just simply loop through
-    for (size_t i = 0; i < std::strlen(buff); i++)
-        buff[i] = std::tolower(buff[i]); // contains a copy of that original string and then we just made it lowercase.
-    // Create a new object, the temporary object right on the stack here base on that information.
-    Mystring temp{buff};
-    // This is one of the benefits of using smart pointers.
-    //  Need to de-allocate that space. Otherwise I'll leak that memory
-    delete[] buff;
-    return temp;
-}
+// Mystring Mystring::operator-() const
+// {
+//     // Remember we need to make a copy of whatever is in the current object, make that lover case, and then create a new object form it. I need to allocate space to create that copy so that I can make lowercase. I don't want to change the object because I can't . It's a const method.
+//     // Let's create a temporary area and memory called buff, and we'll create a new array of characters there. And how big is that going to be. It's going to be as big as t he length of the string in str + 1. For example, If it's frank, I'm going to get bach 5, allocate 1. This is a brand new pointer to an area on the heap that I just allocated. It's local to this function.
+//     // When we're finished with function, we need to get rid of that and de-allocate it.
+//     char *buff = new char[std::strlen(str) + 1];
+//     // At this point I need to copy the string that's in str to buff.
+//     std::strcpy(buff, str);
+//     // Copy that string. So what we can do now is we can just simply loop through
+//     for (size_t i = 0; i < std::strlen(buff); i++)
+//         buff[i] = std::tolower(buff[i]); // contains a copy of that original string and then we just made it lowercase.
+//     // Create a new object, the temporary object right on the stack here base on that information.
+//     Mystring temp{buff};
+//     // This is one of the benefits of using smart pointers.
+//     //  Need to de-allocate that space. Otherwise I'll leak that memory
+//     delete[] buff;
+//     return temp;
+// }
 
 // Concatenate
 // Going to create a new string from it. So by value, it's a Mystring method. We'll call it operator plus. And it expects something on the right-hand side, which is Mystring by reference. And it's const method as well.
-Mystring Mystring::operator+(const Mystring &rhs) const
-{
-    // Need to allocate an area in memory for characters.And how big is this going to be. THis need to be since we're concatenating, it has to be the length of this string plus the length of the right-hand side string plus 1.
-    char *buff = new char[std::strlen(str) + std::strlen(rhs.str) + 1];
-    // That allocates the storage on the heap that I need. At this point, I need to copy the first string and then concatenate the second string to it so I can build the bigger string from it. So we'll say std string copy in to buff from the left-hand side string which is str.
-    std::strcpy(buff, str);
-    // Then we'll do a std string cat to concatenate again into buff from the right-hand side str.
-    std::strcat(buff, rhs.str);
-    // So what we've done now is we've just copied one string and concatenated the other.  At this point, we've got the information we need in buff to create that new temporary object that I'm going to return.  Same thing we did up here.
-    // So we built a object and call it temp, and we'll build it with the buff information
-    Mystring temp{buff};
-    delete[] buff;
-    return temp;
-}
+// Mystring Mystring::operator+(const Mystring &rhs) const
+// {
+//     // Need to allocate an area in memory for characters.And how big is this going to be. THis need to be since we're concatenating, it has to be the length of this string plus the length of the right-hand side string plus 1.
+//     char *buff = new char[std::strlen(str) + std::strlen(rhs.str) + 1];
+//     // That allocates the storage on the heap that I need. At this point, I need to copy the first string and then concatenate the second string to it so I can build the bigger string from it. So we'll say std string copy in to buff from the left-hand side string which is str.
+//     std::strcpy(buff, str);
+//     // Then we'll do a std string cat to concatenate again into buff from the right-hand side str.
+//     std::strcat(buff, rhs.str);
+//     // So what we've done now is we've just copied one string and concatenated the other.  At this point, we've got the information we need in buff to create that new temporary object that I'm going to return.  Same thing we did up here.
+//     // So we built a object and call it temp, and we'll build it with the buff information
+//     Mystring temp{buff};
+//     delete[] buff;
+//     return temp;
+// }
 
 // Display method
 void Mystring::display() const
@@ -139,7 +139,7 @@ bool operator==(const Mystring &lhs, const Mystring &rhs)
 }
 
 // Make lowercase
-Mystring operator-(const Mystring &lhs, const Mystring &rhs)
+Mystring operator-(const Mystring &rhs)
 {
         char *buff = new char[std::strlen(rhs.str) + 1];
     std::strcpy(buff, rhs.str);
