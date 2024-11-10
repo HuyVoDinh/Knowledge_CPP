@@ -1,0 +1,80 @@
+1. The ________ operator is used by C++ to assign one object to another object.
+A. <<
+B. =
+C. ==
+D. :=
+
+=> B
+
+2. Providing the ability for a C++ built-in operator to work with user-defined types is called ________.
+A. operator overriding
+B. operator inheritance
+C. operator overloading
+D. operator extension
+
+=> C
+
+3. Overloading the C++ assignment operator should be done when the class contains ________.
+A. raw pointers 
+B. complex code
+C. C++ strings
+D. more than 10 minutes
+
+=> A
+
+4. If no overloaded assignment operator is provided by the programmer, C++ will provide default assignment that does _________.
+A. deep copy 
+B. nothing
+C. initialization
+D. member-wise assignment
+
+=> D
+
+5. To overload the insertion operator so that you can insert your Test class objects onto an output stream, you would implement a function with the following prototype:
+A. std::ostream operator<<(std::ostream os, Test &obj);
+B. std::ostream &operator<<(std::ostream &os, const Test &obj);
+C. std::ostream &Test::operator<<(std::ostream &os);
+D. std::ostream &Test::operator<<(std::ostream &os) const;
+
+=> B
+
+6. When overloading a C++ operator, which of the following statements is true?
+A. The 'arity' of the operator cannot change
+B. Non C++ operators cannot be overloaded 
+C. Certain C++ operators cannot be overloaded 
+D. The assignment operator must be overloaded as a member function 
+E. All of the above are true.
+
+=> E
+
+7. Most C++ operators can be overloaded as ________ or ________.
+A. friend functions or friend classes
+B. static functions, global functions 
+C. member functions, non-member functions
+D. public methods, private methods
+
+=> C
+
+8. If we overload the C++ relational operators such as ==, !=, <, >, <=, >= we should return the ________ type from the function.
+A. int 
+B. bool     
+C. double 
+D. short 
+
+=> B
+
+9. Often overload operators implemented as non-member functions are declared as ________ functions.
+A. friend 
+B. static 
+C. private 
+D. nested
+
+=> A
+
+10. What is the correct prototype for the Move Assignment operator for a class named Test?
+A. Test &Test::operator=(const Test&rhs);
+B. Test &Test::operator=(Test &rhs);
+C. Test &Test::operator=(Test &&rhs);
+D. Test &Test::operator=(const Test &&rhs);
+
+=> C
