@@ -1,0 +1,24 @@
+Section Overview
+inheritance
+
+What is Inheritance? 
+    Why is it useful?
+
+Terminology and Notation
+
+Inheritance vs. Composition
+
+Deriving classes from existing classes  
+    Types of inheritance 
+
+Protected members and class access 
+
+Constructors and Destructors
+    Passing arguments to base class Constructors
+    Order of constructor and destructors calls 
+
+Redefining base class methods 
+
+Class Hierarchies
+
+Multiple Inheritance 
