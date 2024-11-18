@@ -1,0 +1,91 @@
+1. _______ is when you derive a new class from an existing class.
+
+A. polymorphism
+B. including
+C. overloading
+D. Inheritance
+=> D
+
+2. The following base class members are always inherited by a derived class.
+
+A. private
+B. public
+C. protected
+D. All of the above
+=> D
+
+3. ________ is when a derived class has 2 or more base classes.
+
+A. Inclusion
+B. Overloading 
+C. Multiple inheritance 
+D. Polymorphism
+=> C
+
+4. A public data member of a base class is ________ in its derived class when using public inheritance.
+
+A. private 
+B. public
+C. protected
+D. not accessible
+=> B
+
+5. A private data member of a base class is ________ in its derived class when using public inheritance.
+
+A. private 
+B. public
+C. protected
+D. not accessible
+=> D
+
+6. A collection of classes related with via inheritance relationships is called a(n) ________.
+
+A. Inheritance hierarchies
+B. class collection
+C. inheritance set
+D. inheritance relationships
+=> A 
+
+7. Which statement is NOT always true given the class declarations below?
+
+class A: public B { };
+class C: public B { };
+class D: public C { };
+
+A. D is a B 
+B. A is a B 
+C. A is a C 
+D. A is a B 
+=> C
+
+8. Which statement below is NOT true about inheritance?
+
+A. Inheritance is a reuse mechanism
+B. Inheritance is an abstraction mechanism 
+C. Inheritance always improves the quality of a design
+D. Inheritance can be powerful and complex
+=> C
+
+9. Given the class declarations below. In what order are the class constructors executed when we create an object of type D?
+
+class A: public B { };
+class C: public B { };
+class D: public C { };
+
+A. D C B
+B. B C D
+C. D B C 
+D. only D's constructor executes
+=> B
+
+10. Given the class declarations below. In what order are the class destructors executed when we destroy an object of type D?
+
+class A: public B { };
+class C: public B { };
+class D: public C { };
+
+A. D C B 
+B. B C D 
+C. D B C
+D. only D's constructor executes
+=> A 
