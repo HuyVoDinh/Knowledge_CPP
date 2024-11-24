@@ -1,0 +1,18 @@
+[Smart pointer]
+
+Issues with raw pointers 
+    C++ provides absolute flexibility with memory management    => Allocate and de-allocate storage for heap dynamic variable. In fact, most defects in programs written in programming languages that provide raw pointers are pointer-related defects.
+        Allocation
+        De-allocation
+        Lifetime management
+    Some potentially serious problems   => We've already discussed some of these errors in this course, errors such as uninitialized or wild pointers that could be pointing anywhere in memory. And if you store data to where they're pointing, you could have a potentially catastrophic result. 
+    =>Another error is when we don't de-allocate the storage that we previously allocated on the heap. In this case, we'll leak memory. We've also seen dangling pointers. That's where one pointer is pointing to storage that is thinks is valid, but in fact has already been de-allocated. Using this invalid memory can lead to all sorts of problems that are sometimes very difficult to find and fix.
+    And finally, even if we do everything correctly, our program could throw an exception and the code that releases our allocated memory never execute, and we leak memory anyway.
+    Smart pointers can help us prevent these types of errors. They can help us be more clear about who owns the pointer, and when a pointer should be deleted to free up allocated memory.
+        Uninitialized (wild) pointers
+        Memory leaks
+        Dangling pointers 
+        Not exception safe
+    Ownership?
+        Who owns the pointers?
+        When should a pointer be deleted?
