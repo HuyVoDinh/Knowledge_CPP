@@ -1,0 +1,53 @@
+[Smart Pointers]
+What are they?
+    Objects
+    Can only point to heal-allocated memory 
+    Automatically call delete when no longer needed 
+    Smart pointers Adhere to RAII principles
+    C++ Smart Pointers 
+        Unique pointers(unique_ptr)
+        Shared pointers(shared_ptr)
+        Weak pointers(weak_ptr)
+        Auto pointers(auto_ptr)         Auto pointer has been deprecated so you shouldn't use this going forward, and won't discuss it. 
+
+What are they?
+#include <memory>           => Need to include the memory header file since it defines the smart pointer classes and functions. Smart pointers are implemented as class templates, 
+
+Defined by class templates
+    Wrapper around a raw pointer        => The actual implementation of smart pointers is compiler dependent and is beyond the scope. Once we create a smart pointer, can use the smart pointer much in the same way as use the raw pointer.
+    Overloaded operators
+        Dereference (*)
+        Member selection (->)
+        Pointer arithmetic not supported (++,--,etc)    => Can't do pointer arithmetic on smart pointers, like can with raw pointers.
+    Can have custom deleters        => can explicitly define the exact behavior want when the pointer is about to be destroyed. 
+
+
+A simple example 
+{
+    std::smart_pointer<Some_Class> ptr = ...        //=> will manage an object of type sum class that's been allocated on the heap. Once create a smart pointer object, can use the dereference operator, the member selection operator or any of the other smart pointer member methods. Notice don't have to explicitly delete the pointer when we're done with it. 
+
+    ptr->method();
+    cout << (*ptr) << endl;
+}
+
+// ptr will be destroyed automatically when no longer needed
+//=>The smart pointer's destructor is called automatically and it takes care of de-allocating any heap storage that was used. 
+// They can prevent memory leaks, make code easier to read and write and maintain with less error
+
+RAII - Resource Acquisition Is Initialization 
+
+    Common idiom or pattern used in software design based on container object lifetime
+    RAII objects are allocated on the track => It means that RAII objects will acquire some sort of resource that could be opening a file, allocating memory, acquiring a lock and so forth. 
+    Resource Acquisition 
+        Open a file 
+        Allocate memory 
+        Acquire a lock
+    Is Initialization 
+        The resource is acquired in a constructor 
+    Resource relinquishing
+        Happens in the destructor 
+            Close the file 
+            De-allocate the memory 
+            Release the lock 
+
+=> Smart pointer are examples of RAII classes since this is the idiom they follow with regard to memory resources, a simple concept but a very powerful concept.
