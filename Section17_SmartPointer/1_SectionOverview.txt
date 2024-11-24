@@ -1,0 +1,11 @@
+[Section Overview]
+Smart Pointers
+    Issues with raw pointers 
+    What are smart pointers? and how the address the issues with raw pointers. 
+    Concept of ownership and RAII or resource acquisition is initialization
+    => If c++ can automatically clean up the heap whenever a pointer is no longer needed, then we'll never leak memory, and we don't have to worry about needing to know when a pointer is no longer needed.
+    C++ Smart Pointers 
+        Unique pointers(unique_ptr) => to keep storage that is not shared and the ownership is clear. When you know who owns the pointer, then you know who needs to delete the pointer or at least c++ does.
+        Shared pointers(Shared_ptr) => shared pointers are pointers that share common heap storage and can be very useful. 
+        Weak pointers (weak_ptr)    => How can help us avoid a problem associated with shared pointers.
+    Custom deleters =>
