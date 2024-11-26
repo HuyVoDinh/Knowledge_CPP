@@ -1,0 +1,86 @@
+1. 1. When the reference count of a managed object reaches ________, the destructor for the managed object is invoked.
+
+A. one 
+B. zero
+C. the end of the list
+D. the beginning of the list
+=> B
+
+2. Weak pointers do not share ________ of the managed object.
+
+A. the access modifiers
+B. movement
+C. access 
+D. ownership
+=> D
+
+3. What does the acronym RAII stand for?
+
+A. Resources Are Initially Implicit
+B. Resources Acquisition Is Implicit 
+C. Resources Acquisition Is Initialization
+D. Resources Are Initialized In-place
+=> C
+
+4. Smart pointers can help prevent which of the following?
+
+A. Memory leaks
+B. Uninitialized pointers 
+C. Dangling pointers 
+D. All of the above
+=> D 
+
+5. Unique pointers can only be ________.
+
+A. moved 
+B. shared
+C. copied 
+D. manually deleted
+=> A
+
+6. The use_count() method returns the ________.
+
+A. number of currently active smart pointer 
+B. the pointer's reference count 
+C. the number of times the pointer has been dereferenced
+D. the maximum number of smart pointer available
+=> B
+
+7. Suppose we have a Node in a double-linked list defined as follows with raw pointers. What smart pointer should we use in place of the raw pointers?
+
+class Node {
+   int data;
+   Node *next;
+   Node *prev;
+};
+
+A. auto_ptr
+B. weak_ptr
+C. unique_ptr
+D. shared_ptr
+E. a shared_ptr and a weak_ptr 
+=> E
+
+8.  We can provide smart pointers with custom ________ functions that will be called upon manage object destruction.
+
+A. deleter
+B. overloaded operator
+C. destructor
+D. move assignment
+=> A
+
+9. The get() method for smart pointers returns ________.
+
+A. the name of the smart pointer 
+B. the type of smart pointer 
+C. the raw pointer being managed 
+D. the pointers reference count
+=> C
+
+10.  When you declare a smart pointer object, that object is placed on the ________.
+
+A. free store
+B. garbage collector's active list 
+C. stack
+D. heap
+=> C 
