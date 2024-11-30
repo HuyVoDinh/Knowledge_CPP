@@ -1,0 +1,179 @@
+1. What happens in C++ if an exception is thrown but not caught?
+
+A. It is ignored and the program continues execution
+B. All variables are reset and program execution continues.
+C. The program terminates
+D. An error message is displayed and program execution continues.
+=> C 
+
+2. The C++ catch-all exception handler is written as ________
+
+A. catch()
+B. catch (&)
+C. catch(void)
+D. catch(...)
+=> D
+
+3. Code that could potentially throw an exception should be written in the ________ block.
+
+A. try
+B. catch
+C. throw
+D. finally
+=> A
+
+4. An exception is thrown using the ________ keyword?
+
+A. throws
+B. threw
+C. throw 
+D. thrown
+=> C
+
+5. The C++ Standard Library defines a rich set of exception classes that are derived from ________.
+
+A. std::error 
+B. lang::exception 
+C. std::Exception 
+D. std::exception
+=> D
+
+6. The virtual function what()is first defined in ________.
+
+A. std::exception 
+B. std::runtime_error
+C. std::bac_alloc
+D. std::logic_error
+=> A 
+
+7. What is the output from the following program? 
+
+#include <iostream>
+using namespace std;
+ 
+int main()
+{
+   try {
+       throw 'X';
+   }
+   catch (const int &ex)
+   {
+      cout << "Integer exception" << endl;
+   }
+   catch (...)
+   {
+      cout << "Any exception" << endl;
+   }
+   cout << "Goodbye" << endl;
+   return 0;
+}  
+
+A.  Integer exception 
+    Goodbye 
+B.  Any exception 
+    Goodbye 
+C.  Goodbye 
+D.  Integer exception
+=> B 
+
+8. What is the output from the following program?
+
+#include <iostream>
+void func_a();
+void func_b();
+void func_c();
+ 
+void func_a() {
+    std::cout << "Starting func_a" << std::endl;
+    func_b();
+    throw 3000;
+    std::cout << "Ending func_a" << std::endl;
+}
+ 
+void func_b() {
+    std::cout << "Starting func_b" << std::endl;
+    func_c();
+    throw 2000;
+    std::cout << "Ending func_b" << std::endl;
+}
+ 
+void func_c()  {
+    std::cout << "Starting func_c" << std::endl;
+    throw 1000;
+    std::cout << "Ending func_c" << std::endl; 
+}
+ 
+int main() {    
+    try {
+        func_a();
+    } catch(int &ex) {
+        std::cerr << "Caught error thrown: " << ex << std::endl;
+    }
+    std::cout << "Continuing in main" << std::endl;
+    return 0;
+}
+
+A.  Starting func_a 
+    Starting func_b 
+    Starting func_c 
+    Caught error thrown: 1000
+    Continuing in main 
+B.  Starting func_a 
+    Starting func_b 
+    Starting func_c 
+    Ending func_c
+    Caught error thrown: 2000
+    Continuing in main
+C.  Starting func_a 
+    Starting func_b 
+    Starting func_c 
+    Ending func_c 
+    Caught error thrown: 3000
+    Continuing in main
+D.  There is no output because the program will crash
+=> A
+
+9. What is wrong with the following code?
+
+#include <iostream>
+#include <exception>
+  
+// this function only knows how to double values
+// that are less than 5000
+ 
+int double_it(int val) {
+   if (val >= 5000)
+      throw std::exception();
+   return val * 2;
+ }
+ 
+int main() {
+   try {
+      int *values = new int[10000];
+      for (int i=0; i< 10000; ++i)
+         values[i] = double_it(i); // double_it may throw a std::exception
+      delete [] values;
+ 
+   }
+   catch (const std::exception &ex) {
+      std::cerr << "Don't know how to double numbers > 5000" << std::endl;
+   }
+ 
+   std::cout << "Program complete" << std::endl;
+   return 0;
+}
+
+A. Nothing -- it is correct
+B. It leaks memory since delete [] values won't execute
+C. double_it should throw and itn not a std::exception 
+D. We must call ex.what() in the main catch handler.
+=> B 
+
+10. Which of the following is true about user-defined exception classes.
+
+A. They must always be derived from std::runtime_error. 
+B. They must always be derived from std::exception.
+C. They must always be derived from some subclass of std::exception.
+D. They can be regular C++ classes.
+=> D
+
