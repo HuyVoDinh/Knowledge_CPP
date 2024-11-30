@@ -1,0 +1,7 @@
+[Section overview]
+
+I/O and Streams
+    Streams and I/O => Lean what streams are and how they help abstract the complexity away from working with different types of input and output devices.
+    Stream manipulators => These are functions that can affect hwo we read and write data to and from strings. Then we'll learn about sum of C++ stream manipulators.  
+    Reading and writing to a text file  => These are functions that can affect how we read and write data to and from streams. Learn about stream manipulators that affect Boolean integer and floating point values. And then we'll use some manipulators that work with any type of data to help us format our output. These manipulators give us the ability to align text, fill blank areas with specific characters and set the width of output fields. 
+    Using string streams    => Learn about input files. How to open them, check to see if they were opened successfully, read from them and then close them. Read from using both formatted and unformatted IO. Then wrap up this section by looking at string streams and use the same IO techniques that we use with files with in-memory strings. Learn how can use string streams for data validation. 
