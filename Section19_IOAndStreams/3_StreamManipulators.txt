@@ -1,0 +1,25 @@
+[Stream manipulators]
+
+Streams have useful member functions to control formatting
+Can be used on input and output streams 
+The time of the effect on the stream varies
+Can be used as member functions or as a manipulato => Most of the stream formatters come in two versions, a method version and a manipulatro version. 
+    std::cout.width(10);        //member function 
+    std::cout << std::setw(10); //manipulator   => To use the manipulators, must include to iomanip.
+
+[Common stream manipulators]
+
+Boolean 
+    boolalpha, noboolalpha
+
+Integer
+    dec, hex, oct, showbase, noshowbase, showpos, noshowpos, uppercase, nouppercase
+
+Floating point 
+    fixed, scientific, setprecision, showpoint, noshowpoint, showpos, noshowpos 
+
+Field width, justification and fill 
+    setw, left, right, internal, setfill
+
+Other 
+    endl, flushm skip, noskipws, ws
