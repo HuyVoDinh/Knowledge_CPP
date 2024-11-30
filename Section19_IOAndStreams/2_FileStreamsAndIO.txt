@@ -1,0 +1,47 @@
+[Files, Streams and I/O]
+
+C++ uses streams as an interface between the program and input and output devices. => These devices may be physical devices such as hard disks, the console and the keyboard.
+
+Independent of the actual device => such as some connection to a web server.. C++ provides a stream abstraction to work with IO devices. A stream is an interface that's independent of the actual device. 
+
+Sequence of bytes   => C++ provides different types of streams depending on whether we want input or output, but we can also use a stream that does both. 
+
+Input stream provides data to the program 
+
+Output stream receives data from the program
+
+<Section19_FileStreamsAndIO1.png>
+The upper stream is an input stream that provides input to the program from some input device. This device can be the keyboard of file, a connection to a web service and more.
+The lower stream is an output stream that takes output from the program and sends it to the output device. The output device can be a file, the console, a connection to a web service and more.
+
+
+[Common header files]
+
+Header file     |           Description
+iostream        |   Provides definitions for formatted input and output from/to streams 
+fstream         |   Provides definitions for formatted input and output from/to file streams 
+iomanip         |   Provides definitions for manipulators used to format stream I/O 
+
+[Commonly used stream classes]
+
+class           |           Description
+ios             |   Provides basic support for formatted and unformatted I/O operations. Base class most other classes 
+ifstream        |   Provides for high-level input operations on file based streams => If want to read from a file, can declare object to be an ifstream object.
+ofstream        |   Provides for high-level output operations on file based streams => If want to create a new file or write to a file, can declare it as an object of ofstream. 
+fstream         |   Provides for high-level I/O operations on file based streams. Derived from ofstream and ifstream => If need to do both input and output to a file at the same time, can declare an fstream object to do it. 
+stringstream    |   Provides for high-level I/O operations on memory based strings. Derived from istringstream and ostreamstream    => We an use them with strings to get input and provide output into a string in memory. 
+
+
+[Global stream objects]
+
+=> The fact that we've used them all along without worrying about how to create them, how to connect them and so forth, is a testament to the design of the C++ io library and the device independence model. 
+
+Object          |           Description
+cin             |   Standard input stream - by default 'connected' to the standard input device (keyboard) instance of istream 
+cout            |   Standard output stream - by default 'connected' to the standard output device (console) instance of ostream 
+cerr            |   Standard error stream - by default 'connected' to the standard error device (console) Instance of ostream (unbuffered)
+clog            |   Standard log stream - by default 'connected' to the standard log device (console) Instance of ostream (unbuffered)
+
+Global object - initialized before main executes        => Need to do is include iostream to use them. cin and cout are generally buffered streams. This means that input from cin won't be automatic until the user presses enter. And output to cout occurs only when the stream buffer fills up or we provide a std endline or we flush the stream. 
+                                                        => cerr and clog are the standard error stream and t he standard log stream, respectively. By default, they've both connected to the console. They're both unbuffered, which means that we getr input or output from them as we need it. Best practice is to use cerr for error messages and clog for log messages. 
+Best practice is to use cerr for error messages and clog for log messages. 
