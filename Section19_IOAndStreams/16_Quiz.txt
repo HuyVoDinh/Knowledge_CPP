@@ -1,0 +1,80 @@
+1. The ________ class can be used to create files that can be written to, but not read from?
+
+A. ostream
+B. ifstream
+C. stringstream
+D. writestream
+=> A
+
+2. The ________ class can be used to create files that can be both written to and read from? 
+
+A. ostream
+B. ifstream
+C. stringstream
+D. fstream
+=> D
+
+3. The ________ method reads in an entire line from a text file.
+
+A. get
+B. getline
+C. readline
+D. input
+=> B
+
+4. The ________ method writes a single character to a text file.
+
+A. put
+B. putline
+C. writechar
+D. output
+=> A
+
+5. You must #include  ________  in order to perform file I/O in C++.
+
+A. <file>
+B. <ios>
+C. <iomanip>
+D. <fstream>
+=> D
+
+6. Which of the following stream manipulators is not persistent?
+
+A. setw
+B. fixw
+C. hex
+D. setprecision
+=> A
+
+7. Which class can be used to write formatted data to an in-memory string object?
+
+A. stringbuffer
+B. stringstream
+C. ofstream
+D. fstream
+=> B
+
+8. By default, when we open a file for output, the contents of that file are ________.
+
+A. stored in memory 
+B. appended
+C. truncated
+D. converted to binary
+=> C
+
+9. What are the steps, in order, that should be used when using a file in C++?
+
+A. open the file, read/write data, close the file 
+B. create the data, read/write data, close the file 
+C. create the file, read/write data, copy the file 
+D. open the file, check if opened successfully, read/write data, close the file
+=> D
+
+10.  Closing an output file  ________
+
+A. is handled by the destructor.
+B. is always performed automatically.
+C. should always be done since it writes out any unwritten buffers.
+D. is required or a compiler error will be produced.
+=> C
+
