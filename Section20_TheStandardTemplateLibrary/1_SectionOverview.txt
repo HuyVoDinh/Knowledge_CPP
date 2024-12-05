@@ -1,0 +1,20 @@
+[Section overview]
+
+The Standard Template Library
+    What is the STL
+    Generic programming/Meta-programming    => which is what the stl uses to allow us to use its components on just about any type of data.
+        Preprocessor macros
+        Function template 
+        Class templates
+    STL Containers
+    STL Iterators
+    STL Algorithms
+    Array
+    Vector
+    Deque
+    List and Forward List
+    Set and Multi Set
+    Map and Multi Map 
+    Stack and Queue
+    Priority Queue
+    Algorithms 
