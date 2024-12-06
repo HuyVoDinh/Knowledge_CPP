@@ -1,0 +1,97 @@
+[Generic Programming with macros]
+
+Generic programming => if I have code that's written to be generic, then I should be able to use any types with that code as long as it makes sense and it should work. 
+=> What if I wanted to have a function that took some number as a parameter and returned the square of that number. With generic programming, I should be able to pass in any numeric type into that function, and it'll return the correct result.
+=> So if should work with ints, short ints, longs, long long, float, double. But the C++ compiler is statically typed. So it needs to know the type being passed into that function, so it can type check it.
+=> So if I write the function to expect an integer, then I won't be able to call it correctly with a double. 
+    "Writing code that works with a variety of types as arguments, as long as those argument types meet specific syntactic and semantic requirements", Bjarne Stroustrup
+
+Macros ***beware*** => Be careful when use macros in practice, especially macros that use arguments. 
+
+Function templates
+
+Class templates
+
+[Macros (#define)]
+Notice that there's no semicolon at the end fo the macros. If there was, then the semicolon would also be copied and that's not usually what we want. 
+    C++ preprocessor directives
+    No type information
+    Simple substitution
+
+    #define MAX_SIZE 100
+    #define PI 3.14159
+
+    if (num > MAX_SIZE)
+        std::cout << "Too big";
+
+    double area = PI * r * r;
+
+    ------------
+
+    #define MAX_SIZE 100        // remove
+    #define PI 3.14159          // remove
+
+    if (num > 100)
+        std::cout << "Too big";
+
+    double area = 3.14159 * r * r;
+
+[max function]
+
+    Suppose we need a function to determine the max of 2 integers 
+
+int max(int a, int b) {
+    return (a > b) ? a : b;
+}
+
+int x = 100;
+int y = 200;
+std::cout << max (x, y);            // displays 200
+
+    Now suppose we need to determine the max of 2 doubles, and 2 chars
+
+int max(int a, int b){
+    return (a > b) ? a : b;
+}
+
+int max(double a, double b){
+    return (a > b) ? a : b;
+}
+
+int max(char a, char b){
+    return (a > b) ? a : b;
+}
+
+[Macros with argument s (#define)]
+    We can write a generic macro with arguments instead
+
+#define MAX (a, b) ((a > b) ? a : b)    => We can define it to be the conditional expression we saw earlier. So when the preprocessor sees max with two arguments, it'll replace it with what we defined it in the macro, and it will also replace the arguments a and b. 
+                                        => So now we have no functions defined, just a single macro called max. We can use max in our code with arguments as you see in the examples,it works fine. That's an example of generic programming.
+                                        => Remember, the preprocessor is simply substituting. It doesn't know C++, so problems can occur once the compiler tries to compiler the processed code. 
+
+std::cout << MAX(10, 20) << std::endl;      // 20
+std::cout << MAX(2.4, 3.5) << std::endl;      // 3.5
+std::cout << MAX('A', 'C') << std::endl;      // C
+
+    We have to be careful with macros 
+
+#define SQUARE (a) a*a 
+
+result = SQUARE (5);        // Expect 25
+result = 5*5;               // Get 25
+
+result = 100/SQUARE(5);     // Expect 4
+result = 100/5*5            // Get 100! => problem -> make this better
+
+--------
+#define SQUARE (a) ((a) * (a))
+
+result = SQUARE (5);        // Expect 25
+result = ((5) * (5));               // Get 25
+
+result = 100/SQUARE(5);     // Expect 4
+result = 100/((5) * (5))    // Get 4
+=> Why we don't want to do this because the compiler isn't doing it. The preprocessor is doing it, and it doesn't know the syntax or semantics of C++. 
+=> Don't use macros with arguments in code. If you have legacy code, understand how it works so that you can better test the code. 
+=> So what's a better way to write these max and square functions so that we can use generic programming and let the compiler do the  work.
+
