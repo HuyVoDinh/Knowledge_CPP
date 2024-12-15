@@ -1,0 +1,99 @@
+1. Three of the main components of the STL are:
+
+A. list, forward_list, and deque
+B. vector, deque, and array
+C. containers, iterators, and algorithms
+D. pointers, references, and constructor
+=> C
+
+
+2. Three types of containers in the STL are ________________
+
+A. forward, reverse, and bi-directional containers
+B. constant time and linear time containers
+C. linear and non-linear containers
+D. sequence, associative, and adapter containers
+=> D
+
+3. Which of the following are container adapters?
+
+A. list and forward_list
+B. multiset and multimap
+C. stack, queue, and priority_queue
+D. unordered_map and unordered_set
+=> C
+
+4. In order to use and compare user-defined Classes in the STL, the following operators must be overloaded:
+
+A. operator=
+B. operator== and operator<
+C. operator< and operator>
+D. operator<<
+=> B
+
+5. We should use _______________ to obtain an iterator to the first element in a container.
+
+A. begin()
+B. start()
+C. first()
+D. head()
+=> A
+
+6. The ____________ container should be considered if we expect to insert many elements into the middle of the container.
+
+A. stack 
+B. deque 
+C. map 
+D. list
+=> D
+
+7. The ____________ container should be considered if we want to store unique key/value pairs sorted by key.
+
+A. queue
+B. map 
+C. list 
+D. priority_queue
+=> B
+
+8. Some STL container classes provide the same function that is provided by in the algorithms library. For example, the list container provides a sort function as does the algorithms library? Why is this so?
+
+A. The function in the algorithms library is generic, while the function in the container class is optimized for that container type. 
+B. It's a design mistake.
+C. There is no difference between the functions.
+D. The function in the algorithms library will always be more efficient.
+=> A
+
+9. The STL algorithms use iterators and in many cases allow the programmer to provide specific behavior by using ____________.
+
+A. functors (function objects)
+B. lambda expressions
+C. function pointers 
+D. All of the above
+=> D 
+
+10. The ____________ container should be considered if we expect to insert and remove elements from the front and back of the container.
+
+A. deque 
+B. queue 
+C. forward_list 
+D. priority_queue
+=> A
+
+
+
+
+
+A.
+B.
+C.
+D.
+=>
+
+10. 
+
+A.
+B.
+C.
+D.
+=>
+
